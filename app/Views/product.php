@@ -7,7 +7,11 @@
 </head>
 <body>
     <h1>Data Products</h1>
+
+
     <table border="1" cellpadding ="10">
+        
+    <a href="<?=base_url('insertproducts/')?>">Tambah </a>
         <thead>
             <tr>
                 <th>ID</th>
@@ -24,7 +28,7 @@
                 <td><?=$p->description?></td>
                 <td>
                     <a href="<?=base_url('edit-products/' . $p->id)?>">Edit </a>
-                    <a href="<?=base_url('delete-products/' . $p->id)?>)">Hapus</a>
+                    <a href="<?=base_url('delete-product/' . $p->id)?>)">Hapus</a>
                 </td>
             </tr>
             <?php endforeach?>

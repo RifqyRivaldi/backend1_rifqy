@@ -31,7 +31,7 @@ class ProductController extends BaseController {
         $data = [
             'product' => $product
         ];
-        return view('edit_product', $data);
+        return view('edit-products', $data);
     }
 
     public function updateProduct($id) {
@@ -45,7 +45,7 @@ class ProductController extends BaseController {
         return redirect()->to(base_url("products"));
     }
 
-    public function deleteProduct($id) {
+    public function deleteProduct($id){
         $this->product->delete($id);
         return redirect()->to(base_url('products'));
     }
